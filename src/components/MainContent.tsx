@@ -1,27 +1,26 @@
 import { useState } from "react";
 import img1 from "../assets/1.jpg";
 import img2 from "../assets/2.jpg";
-import cvFile from "../assets/Matas_Strimaitis_CV.pdf"; // Import the CV file
+import cvFile from "../assets/Matas_Strimaitis_CV.pdf"; 
 
 interface MainContentProps {
   activeSection: string;
 }
 
-export default function MainContent({ activeSection }: MainContentProps) {
-  const images = [img1, img2]; // Array of images
-  const [currentImage, setCurrentImage] = useState(0); // State to track the current image
+export default function MainContent({ }: MainContentProps) {
+  const images = [img1, img2]; 
+  const [currentImage, setCurrentImage] = useState(0); 
 
   const handleNextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % images.length); // Move to the next image
+    setCurrentImage((prev) => (prev + 1) % images.length); 
   };
 
   const handlePrevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + images.length) % images.length); // Move to the previous image
+    setCurrentImage((prev) => (prev - 1 + images.length) % images.length); 
   };
 
   return (
     <div className="ml-[200px] flex flex-col h-screen w-full overflow-y-auto bg-[#212A31]">
-      {/* Home Section */}
       <section
         id="home"
         className="snap-start flex-shrink-0 w-full h-screen bg-cover text-white p-4 md:p-8 flex flex-col items-start justify-center"
@@ -39,7 +38,6 @@ export default function MainContent({ activeSection }: MainContentProps) {
           <p className="text-lg md:text-xl font-light mb-6 text-[#D3D9D4]">
             Front-End Developer / UX Designer
           </p>
-          {/* Download CV Button */}
           <a
             href={cvFile}
             download="Matas_Strimaitis_CV.pdf"
@@ -49,7 +47,6 @@ export default function MainContent({ activeSection }: MainContentProps) {
           </a>
         </div>
 
-        {/* Image Navigation Buttons */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-4">
           <button
             onClick={handlePrevImage}
@@ -66,7 +63,6 @@ export default function MainContent({ activeSection }: MainContentProps) {
         </div>
       </section>
 
-      {/* Resume and About Section */}
       <section
         id="resume-about"
         className="snap-start flex-shrink-0 w-full h-screen bg-[#2E3944] p-4 md:p-8"
@@ -106,7 +102,6 @@ export default function MainContent({ activeSection }: MainContentProps) {
         </div>
       </section>
 
-      {/* Skills Section */}
       <section
         id="skills"
         className="snap-start flex-shrink-0 w-full h-screen bg-[#124E66] p-4 md:p-8"

@@ -1,17 +1,15 @@
 import { useState } from "react";
-import Navbar from "./components/Navbar"; // Updated to use Navbar instead of Sidebar
+import Navbar from "./components/Navbar";
 import MainContent from "./components/MainContent";
 import "./App.css";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("home"); // Default section is "Home"
+  const [activeSection] = useState("home"); 
 
   return (
     <div className="flex">
-      {/* Sidebar */}
       <Navbar />
 
-      {/* Main Content */}
       <MainContent activeSection={activeSection} />
     </div>
   );

@@ -3,12 +3,10 @@ import { FaFacebook, FaTwitter, FaGoogle } from "react-icons/fa";
 export default function Navbar() {
   return (
     <div className="fixed top-0 left-0 h-screen w-[200px] bg-black text-white flex flex-col items-center py-8">
-      {/* Profile Section */}
       <div className="bg-yellow-400 text-black px-6 py-4 mb-8 w-full text-center">
         <h1 className="text-xl font-bold">Matas Štrimaitis</h1>
       </div>
 
-      {/* Navigation Links */}
       <nav className="flex flex-col space-y-4 text-sm w-full text-center">
         <a href="#home" className="hover:text-yellow-400">
           Home
@@ -36,7 +34,6 @@ export default function Navbar() {
         </a>
       </nav>
 
-      {/* Social Links */}
       <div className="flex space-x-4 mt-auto mb-4">
         <a href="#" className="text-yellow-400 text-lg">
           <FaFacebook />
