@@ -3,21 +3,19 @@ import img1 from "../assets/1.jpg";
 import img2 from "../assets/2.jpg";
 import cvFile from "../assets/Matas_Strimaitis_CV.pdf"; 
 
-interface MainContentProps {
-  activeSection: string;
-}
 
-export default function MainContent({ }: MainContentProps) {
-  const images = [img1, img2]; 
-  const [currentImage, setCurrentImage] = useState(0); 
+export default function MainContent() {
+  const images = [img1, img2];
+  const [currentImage, setCurrentImage] = useState(0);
 
   const handleNextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % images.length); 
+    setCurrentImage((prev) => (prev + 1) % images.length);
   };
 
   const handlePrevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + images.length) % images.length); 
+    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
   };
+
 
   return (
     <div className="ml-[200px] flex flex-col h-screen w-full overflow-y-auto bg-[#212A31]">
